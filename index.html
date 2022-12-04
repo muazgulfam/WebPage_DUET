@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+
+<body>
+    <h1 class="logo2">
+        <div><img src="Dawood logo.jpg"></div>
+    </h1>
+    <section class=" header" id="header">
+        <div class="nav-bar">
+            <div class=" logo">
+                <a href="#">Dawood University Of Engineering & Technology</a>
+            </div>
+            <div class= "menu">
+                <ul>
+                   <li><a href="#"class="active">Home</a></li>
+                   <li><a href="C:\Users\3BROS COMPUTERZ\Desktop\New ICT Assignment\Login Page\Login Page.html">Portal</a></li>
+                   <li><a href="admission.html">Admission</a></li>
+                   <li><a href="#">NewsLetter</a></li>
+                   <li><a href="#">Technology</a></li>
+                   <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>  
+        <div class="hero">
+            <div class="row">
+                <div class="left-sec">
+                    <div class="content">
+                        <h2><span>DUET</span><br>Our Mission</h2>
+                        <p>Dawood University of Engineering & Technology aims to invest in human capital for accelerated advancement in engineering knowledge and practices, new frontiers in R&D hence creating knowledge led economy and better future for generations to come.</p>    
+                    </div>
+                    <button class="discover-btn">
+                        <a href="#">discover</a><span><i class="fa fa-arrow-circle-o-right"></i></span>
+                    </button>
+                    <!-- information not working -->
+                      <div class="information">
+                     <div class="production">
+                        <p>Designer</p>
+                        
+                        <h2><b>Muaz Bin Gulfam</b></h2>
+                        
+                        
+                    </div>
+                 </div> 
+                </div>
+                <div class="right-sec">
+                    <div class="my-car">
+                        <div><img src="img 1.jpg"></div>
+                        <div><img src="img 2.jpeg"></div>
+                        <div><img src=".\img 3.png"></div>
+                        <div><img src=".\img 4.jpg"></div>
+                        <div><img src=".\Img 6.jpeg"></div>
+                        <div><img src=".\Img 7.jpeg"></div>
+                        <div><img src=".\Img 8.jpeg"></div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<script> type="text/javascript>"
+ $(document).ready(function(){
+  $(".my-car").slick({
+     autoplay:true,
+     dots:true,
+     speed:1000,
+     customPaging : function(slider, i) {
+         var thumb = $ (slider.$slides[i]).data();
+     },
+ })
+});
+</script>
+</body>
+</html>

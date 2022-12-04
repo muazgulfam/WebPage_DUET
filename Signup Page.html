@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Signup Style.css">
+</head>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #0ce717;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #ebe7e4;
+  padding: 20px;
+}
+</style>
+<body>
+
+  <center><h1><u class="thick">SignUp Page</u></h1></center>
+
+<div>
+  <form method="post" name='google-sheet'> 
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="Name" placeholder="Your name..">
+
+    <label for="username">User Name</label>
+    <input type="text" id="username" name="Username" placeholder="Your Unique Username..">
+
+    <h5 class="mb-0 me-4">Gender: </h5>
+    <div class="form-check form-check-inline mb-0 me-4">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="femaleGender"
+        value="option1"
+      />
+      <label class="form-check-label" for="femaleGender">Female</label>
+    </div>
+
+    <div class="form-check form-check-inline mb-0 me-4">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="maleGender"
+        value="option2"
+      />
+      <label class="form-check-label" for="maleGender">Male</label>
+    </div>
+
+    <div class="form-check form-check-inline mb-0">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="otherGender"
+        value="option3"
+      />
+      <label class="form-check-label" for="otherGender">Other</label>
+    </div>
+
+    <label for="lname">Father's Name</label>
+    <input type="text" id="lname" name="Father's name" placeholder="Your Father's name..">
+
+    <label for="mobile">Mobile Number</label>
+    <input type="text" id="mobile" name="Mobile number" placeholder="Your mobile number..">
+
+    <label for="email">E-mail ID</label>
+    <input type="text" id="email" name="Email-ID" placeholder="Your E-mail ID..">
+
+    <label for="country">Country</label>
+    <select id="country" name="Country">
+      <option value="Pakistan">Pakistan</option>
+      <option value="canada">Canada</option>
+      <option value="USA">USA</option>
+      <option value="India">India</option>
+      <option value="Saudi Arabia">Saudi Arabia</option>
+      <option value="UAE">UAE</option>
+      <option value="Qatar">Qatar</option>
+      <option value="Japan">Japan</option>
+    </select>
+  
+    <input type="submit" value="Submit" name="submit"> 
+  </form>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzQK6NIVbgsz3kTiCzhGW40WLvLE5wdhFKXRuJ1ldxoIHXR7jC3Vdu9ggsNVDXlWcM/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting DUET..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
+
+
